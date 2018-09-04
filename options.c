@@ -6,7 +6,7 @@
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 10:22:03 by exam              #+#    #+#             */
-/*   Updated: 2018/09/04 22:22:26 by lnguyen          ###   ########.fr       */
+/*   Updated: 2018/09/04 23:01:25 by lnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int		input_type(int ac, char **av)
 		j = input_valid(av[i]);
 		if (j == -1)
 		{
-			write(1, "Invalid Options\n", 16);
+			write(1, "Invalid Option\n", 15);
 			return (0);
 		}
 		if (j == 0)
