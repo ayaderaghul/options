@@ -6,7 +6,7 @@
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 10:22:03 by exam              #+#    #+#             */
-/*   Updated: 2018/09/04 21:57:11 by lnguyen          ###   ########.fr       */
+/*   Updated: 2018/09/04 22:22:26 by lnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		input_valid(char *str)
 	int i;
 
 	if (str[0] != '-')
-		return (-1);
+		return (2);
 	else if (str[1] == 'h')
 		return (0);
 	else
@@ -105,7 +105,8 @@ void	print_options(int ac, char **av)
 	i = 1;
 	while (i < ac)
 	{
-		fill_in(av[i], tab);
+		if (input_valid(av[i]) == 1)
+			fill_in(av[i], tab);
 		++i;
 	}
 //	tab[35] = 0;
